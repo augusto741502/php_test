@@ -1,4 +1,2 @@
 <?php
-
-
 echo "Hola Mundo";
