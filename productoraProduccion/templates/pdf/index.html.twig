@@ -1,0 +1,99 @@
+<table width="550">
+    <tr>
+    <td><img src="{{imageSrc}}" width="200"></td>
+    <td>
+    <p align="center">Productora Dream Spa, Rut: 76.531.101-2
+                                        Av. Almirante Latorre #752 Los Angeles, Giro: Producción de Eventos
+                                        Telefono: 432-540810 Cel- 77757976, productoradream@gmail.com</p>
+    </td>
+    </tr>
+
+    <tr>
+    <td colspan="2" align="center">
+    <H3>PRESUPUESTO</H3>
+    </td>
+    </tr>
+    <tr>
+    <td>FECHA:</td>
+    <td>{{ fecha }}</td>
+    </tr>
+
+    <tr>
+    <td>PRESUPUESTO N°:</td>
+    <td>{{ n_presupuesto }}</td>
+    </tr>
+
+    <tr>
+    <td>Para:</td>
+    <td>{{cliente}}</td>
+    </tr>
+
+    <tr>
+    <td>Correo:</td>
+    <td>{{correo}}</td>
+    </tr>
+
+    <tr>
+    <td>Fono:</td>
+    <td>{{telefono}}</td>
+    </tr>
+    </table>
+    </br>
+
+    <table width="550"> 
+    <thead style="background:#7BCFF3">
+    <tr>
+    <th style="font-size:12px;">Servicio</th>
+    <th style="font-size:12px;">Valor</th>
+    <th style="font-size:12px;">Cant</th>
+    <th style="font-size:12px;">SubTotal</th>
+    </tr>
+    </thead>
+
+    <tbody>
+        {% set valor1 = 0 %}
+        {% set valor2 = 0 %}
+        {% set valor3 = 0 %}
+        
+        {% for listas in lista %}
+
+            <tr>
+                <td>{{ listas.servicio }}</td>
+                <td align="right">${{ listas.valor|number_format(0, ',', '.') }}</td>
+                <td align="right">{{ listas.cantidad|number_format(0, ',', '.') }}</td>
+                <td align="right">${{ listas.subtotal|number_format(0, ',', '.') }}</td>
+            </tr> 
+        {% endfor %}
+    
+    <tr>
+        <td>Produccion de evento general</td>
+        <td align="right" >${{valor1_|number_format(0, ',', '.')}}</td>
+        <td align="right" >{{valor2_|number_format(0, ',', '.')}}</td>
+        <td align="right">${{valor3_|number_format(0, ',', '.')}}</td>
+    </tr>
+
+    <tr>
+    <td  colspan="4" align="right">NETO= ${{valor3_|number_format(0, ',', '.')}}</td>
+    </tr>
+    <tr>
+    <td colspan="4" align="right">IVA=${{iva|number_format(0, ',', '.')}}</td>
+    </tr>
+
+    <tr>
+    <td colspan="4" align="right">TOTAL= ${{valoriva|number_format(0, ',', '.')}}</td>
+    </tr>
+
+    </tbody>
+    </table>
+
+    <table>
+    <tr>
+    <td><p>Esperando contar con una buena acogida de su parte. Saluda Atte.</p></td>
+    </tr>
+    </table> 
+
+    <table> 
+    <tr>
+    <td><p>Productora Dream Spa, Rut: 76.531.101-2</p></td>
+    </tr>
+    </table>
